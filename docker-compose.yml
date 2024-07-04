@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  springapp:
+    image: 882275655805.dkr.ecr.ap-south-1.amazonaws.com/springconfig:latest
+    volumes:
+      - /path/on/host:/path/in/container
+    ports:
+      - "8090:8005"  # Adjust the ports as needed
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      # Add other environment variables if needed
